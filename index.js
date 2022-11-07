@@ -1,13 +1,16 @@
 const DOMSelector = {
   button: document.getElementById("btn"),
-  text: document.getElementById("text"),
-  box: document.getElementById("#big-black-box"),
-  list: document.querySelectorAll(".point"),
+  text: document.getElementById("#text"),
+  box: document.getElementById("big-black-box"),
+  points: document.querySelectorAll(".point"),
 };
 console.log(DOMSelector.text);
 
-function styling(document, text) {
-  document.body.style.backgroundColor = "purple";
-  text.style.fontsize = `10rem`;
+function styling(background, text) {
+  background.style.backgroundColor = "purple";
+  text.style.fontSize = "2rem";
 }
-console.log(styling());
+
+DOMSelector.button.addEventListener("click", function () {
+  styling(DOMSelector.box, DOMSelector.text);
+});
