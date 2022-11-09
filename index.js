@@ -1,8 +1,8 @@
 const DOMSelector = {
   button: document.getElementById("btn"),
-  text: document.getElementById("#text"),
-  box: document.getElementById("big-black-box"),
-  points: document.querySelectorAll(".point"),
+  text: document.querySelector("#text"),
+  box: document.getElementById("info-box"),
+  form: document.querySelectorAll(".context"),
 };
 console.log(DOMSelector.text);
 
