@@ -1,12 +1,15 @@
 const DOMSelector = {
-  button: document.getElementById("btn"),
+  submit: document.getElementById("#form"),
+  button: document.getElementById("button"),
   text: document.querySelector("#text"),
   box: document.getElementById("info-box"),
   form: document.querySelectorAll(".context"),
-  input: document.querySelector("#input"),
+  // input: document.querySelector("#input"),
 };
 
-DOMSelector.button.addEventListener("submit", function () {
-  let input = DOMSelector.box.value;
-  console.log(input);
+DOMSelector.submit.addEventListener("submit", function () {
+  event.preventDefault();
+  let input = DOMSelector.submit.value;
+  DOMSelector.box.insertAdjacentHTML("beforeend", ``);
 });
+console.log(input);
