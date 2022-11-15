@@ -1,15 +1,25 @@
 const DOMSelector = {
-  submit: document.getElementById("#form"),
+  submit: document.getElementById("form"),
   button: document.getElementById("button"),
-  text: document.querySelector("#text"),
   box: document.getElementById("info-box"),
-  form: document.querySelectorAll(".context"),
-  // input: document.querySelector("#input"),
+  input: document.querySelectorAll(".text-box"),
 };
 
-DOMSelector.submit.addEventListener("submit", function () {
-  event.preventDefault();
-  let input = DOMSelector.submit.value;
-  DOMSelector.box.insertAdjacentHTML("beforeend", ``);
+console.log(DOMSelector.submit, DOMSelector.button, DOMSelector.box);
+DOMSelector.submit.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let input = DOMSelector.input;
+  let sport = {};
+  sport.name = input[0].value;
+  sport.team = input[1].value;
+  const listing (sport) [
+    sport.array.forEach(element => {
+      console.log(element.name, element.team);
+    })
+  ]
+  
+
+  console.log(input);
+  return input;
 });
-console.log(input);
+DOMSelector.input.insertAdjacentHTML("beforebegin", `${input}`);
