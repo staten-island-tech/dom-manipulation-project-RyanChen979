@@ -94,7 +94,7 @@ h5 {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
 }
 
-.display {
+#display {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -109,7 +109,7 @@ h5 {
   width: 26%;
   height: 55rem;
   margin: 1rem auto;
-  background-color: #131313;
+  background-color: midnightblue;
   color: white;
   align-items: center;
 }
@@ -117,8 +117,9 @@ h5 {
   width: 100%;
   height: auto;
 }
-.display-artist,
-.display-album {
+.display-sport,
+.display-team,
+.display-athlete {
   font-size: var(--h3);
 }
 .remove {
