@@ -1,14 +1,25 @@
 const DOMSelector = {
   submit: document.getElementById("form"),
   button: document.getElementById("button"),
-  box: document.getElementById("display"), //not rtight
+  box: document.querySelector(".display-card"),
   input: document.querySelectorAll(".text-box"),
+  removeBtn: document.getElementsByClassName(".remove-btn"),
 };
 
-console.log(DOMSelector.submit);
+console.log(DOMSelector.submit, DOMSelector.input);
 
-function input() {
-  let input = DOMSelector.input.value;
+// function input() {}
+
+// function card() {}
+
+// function remove() {
+//   // DOMSelector.removeBtn.addEventListener("click", display.remove());
+// }
+
+DOMSelector.submit.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let input = DOMSelector.input;
 
   let sport = {};
   sport.name = input[0].value;
@@ -16,25 +27,24 @@ function input() {
   sport.player = input[2].value;
   sport.img = input[3].value;
 
-  return sport;
-}
+  console.log(sport.name, sport.team, sport.player, sport.img);
 
-function card() {
+  // console.log(card());
+  // card();
   DOMSelector.box.insertAdjacentHTML(
-    "beforeend",
-    `<h2>${input[0].value}</h2>
-      <br>
-      <h3>${input[1].value}</h3>
-      <br>
-      <h3>${input[2].value}</h3>`
+    "afterbegin",
+    `
+    <h2>${sport.name}</h2>
+    <br>
+    <h3>${sport.player}</h3>
+    <br>
+    <img class="info-img" src="${sport.img}"/>
+    <br>
+    <h3>${sport.team}</h3>
+    
+    
+    `
   );
-}
 
-DOMSelector.submit.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  console.log(input());
-
-  console.log(card());
-  card();
+  // remove();
 });
