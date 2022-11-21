@@ -110,16 +110,16 @@ h5 {
   height: 55rem;
   margin: 1rem auto;
   background-color: midnightblue;
-  color: white;
+  color: black;
   align-items: center;
 }
 .display-img {
   width: 100%;
   height: auto;
 }
-.display-sport,
-.display-team,
-.display-athlete {
+.display-name,
+.display-character,
+.display-img {
   font-size: var(--h3);
 }
 .remove {

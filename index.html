@@ -7,28 +7,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Sports Interests</h1>
+    <h1>Gaming Experiences</h1>
     <section class="parent-form">
       <form id="form">
         <div class="form-inputs">
           <div class="form-input">
-            <label for="sport">Favorite Sport: </label>
-            <input type="text" id="sport" class="text-box" required />
+            <label for="name">Favorite Game: </label>
+            <input type="text" id="game" class="text-box" required />
           </div>
 
           <div class="form-input">
-            <label for="team">Favorite Team: </label>
-            <input type="text" id="team" class="text-box" required />
+            <label for="character">Favorite Character: </label>
+            <input type="text" id="character" class="text-box" required />
           </div>
 
           <div class="form-input">
-            <label for="player">Favorite Athlete: </label>
-            <input type="text" id="name" class="text-box" required />
-          </div>
-
-          <div class="form-input">
-            <label for="url">Image of Athlete: </label>
+            <label for="img">Image of Character: </label>
             <input type="text" id="url" class="text-box" required />
+          </div>
+
+          <div class="form-input">
+            <label for="gender">Gender: </label>
+            <input type="text" id="gender" class="text-box" />
+          </div>
+
+          <div class="form-input">
+            <label for="img">Age: </label>
+            <input type="text" id="age" class="text-box" />
           </div>
         </div>
 
@@ -39,9 +44,14 @@
     </section>
 
     <section class="display" id="display">
-      <div class="display-card">
-        <button class="remove btn">Remove Card</button>
-      </div>
+      <!-- <div class="display-card">
+            <h2 class="display-name"></h2>
+            <h3 class="display-character"></h3>
+            <img class="display-img" src=""/>
+            <h4 class="display-gender"></h4>
+            <h4 class="display-age"></h4>
+             <button class="remove btn">Remove Card</button>
+        </div> -->
     </section>
 
     <script src="index.js"></script>
