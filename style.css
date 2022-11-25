@@ -63,13 +63,16 @@ h5 {
   height: 2.5rem;
   font-size: 1.5rem;
 }
+.label {
+  font-size: 2rem;
+}
 .form-input {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  height: 10vh;
+  height: auto;
 }
 .enter,
 .enter:link,
@@ -122,7 +125,8 @@ h5 {
 }
 .display-name,
 .display-character,
-.display-img {
+.display-gender,
+.display-age {
   font-size: var(--h3);
 }
 .remove-btn {

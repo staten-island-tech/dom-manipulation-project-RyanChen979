@@ -2,11 +2,6 @@ const DOMSelector = {
   submit: document.getElementById("form"),
   box: document.querySelector(".display"),
   input: document.querySelectorAll(".text-box"),
-  name: document.getElementById("game"),
-  character: document.getElementById("character"),
-  img: document.getElementById("url"),
-  gender: document.getElementById("gender"),
-  age: document.getElementById("age"),
 };
 
 console.log(DOMSelector.input, DOMSelector.submit);
@@ -47,8 +42,8 @@ DOMSelector.submit.addEventListener("submit", function (e) {
   let game = userInput();
 
   card(game);
-  document.querySelectorAll(".remove-btn").forEach((button) => {
-    button.addEventListener("click", removeCard);
+  document.querySelectorAll(".remove-btn").forEach((removeButton) => {
+    removeButton.addEventListener("click", removeCard);
   });
 
   remove();
