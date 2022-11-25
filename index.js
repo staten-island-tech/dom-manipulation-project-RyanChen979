@@ -38,7 +38,7 @@ function card(game) {
 }
 
 function removeCard(abc) {
-  abc.target.parentElement.remove;
+  abc.target.parentElement.remove();
 }
 
 DOMSelector.submit.addEventListener("submit", function (e) {
@@ -48,7 +48,7 @@ DOMSelector.submit.addEventListener("submit", function (e) {
 
   card(game);
   document.querySelectorAll(".remove-btn").forEach((button) => {
-    button.addEventListener("click", removeCard(abc));
+    button.addEventListener("click", removeCard);
   });
 
   remove();
