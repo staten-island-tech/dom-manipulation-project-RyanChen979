@@ -2,6 +2,11 @@ const DOMSelector = {
   submit: document.getElementById("form"),
   box: document.querySelector(".display"),
   input: document.querySelectorAll(".text-box"),
+  name: document.getElementById("game"),
+  character: document.getElementById("character"),
+  url: document.getElementById("url"),
+  gender: document.getElementById("gender"),
+  age: document.getElementById("age"),
 };
 
 console.log(DOMSelector.input, DOMSelector.submit);
@@ -15,6 +20,14 @@ function userInput() {
   game.gender = input[3].value;
   game.age = input[4].value;
   return game;
+}
+
+function clearInputs() {
+  DOMSelector.name.value = "";
+  DOMSelector.character.value = "";
+  DOMSelector.url.value = "";
+  DOMSelector.gender.value = "";
+  DOMSelector.age.value = "";
 }
 
 function card(game) {
@@ -40,6 +53,7 @@ DOMSelector.submit.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let game = userInput();
+  clearInputs();
 
   card(game);
   document.querySelectorAll(".remove-btn").forEach((removeButton) => {
